@@ -1,0 +1,10 @@
+Primordial,Java,stdlib,none
+Primordial,Java,jarFile,primordial.jar.model
+Application,Java,jarFile,C:\\Users\\StuartSiroky\\workspace_luna_wala\\MyTest.jar
+Application,Java,binaryDir,C:\\Users\\StuartSiroky\\workspace_luna_wala\\Test\\bin
+Application,Java,jarFile,C:\\Users\\StuartSiroky\\workspace_luna_wala\\CalcNoSwing.jar
+Application,Java,binaryDir,C:\\Users\\StuartSiroky\\git\\NoSwingCalc\\bin
+
+
+java\/lang\/Character*
+java\/lang\/String\/.*
