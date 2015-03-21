@@ -1,0 +1,5 @@
+Primordial,Java,stdlib,none
+Primordial,Java,jarFile,primordial.jar.model
+Primordial,Java,jarFile,C:\\Program Files\\Java\\jre7\\lib\\rt.jar
+Application,Java,binaryDir,C:\\Users\\StuartSiroky\\workspace_luna_wala\\rwgui\\bin
+

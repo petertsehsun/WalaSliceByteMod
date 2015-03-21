@@ -10,24 +10,24 @@ import slicerWala.CallGraphSlicer;
 import com.ibm.wala.ipa.callgraph.CallGraphBuilderCancelException;
 import com.ibm.wala.ipa.cha.ClassHierarchyException;
 
-public class SlicerTest {
+public class SlicerTest_rwgui {
 	public static void main(String[] args) throws IOException,
 			ClassHierarchyException, IllegalArgumentException,
 			CallGraphBuilderCancelException, NotFoundException,
 			CannotCompileException {
 		long start = System.currentTimeMillis();
 		
-		String classPath = "C:\\Users\\StuartSiroky\\git\\NoSwingCalc\\bin";
-		String scopeFile = "C:\\Users\\StuartSiroky\\git\\WalaSliceByteMod\\dat\\CalcNoSwingScopeList.txt";
-		String excluFile = "C:\\Users\\StuartSiroky\\git\\WalaSliceByteMod\\dat\\MyExclusions.txt";
-		String mainClass = "Lcalc/view/CalculatorView";
+		String classPath = "C:\\Users\\StuartSiroky\\workspace_luna_wala\\rwgui\\bin";
+		String scopeFile = "C:\\Users\\StuartSiroky\\git\\WalaSliceByteMod\\dat\\rwguiScopeList.txt";
+		String excluFile = "C:\\Users\\StuartSiroky\\git\\WalaSliceByteMod\\dat\\RWGuiExclusions.txt";
+		String mainClass = "Lrwgui/view/RWGuiFrame";
 		String caller = "";
 		String callee = "";
-		caller = "calc.controller.CalculatorController.equalsOperation()V";
-		callee = "calc.model.CalculatorModel.equalsOp()V";
+		caller = "rwgui.model.RackAndComponentSet.createRackTypeI(Ljava/lang/String;IDDZZLjava/lang/String;)V";
+		callee = "java.beans.PropertyChangeSupport.firePropertyChange(Ljava/lang/String;ZZ)V";
 		ArrayList<String> keepMList = new ArrayList<String>();
-		keepMList.add("calc.view.CalculatorView.getContentPane()Lcalc/noSwing/Container;");
-		keepMList.add("calc.noSwing.MyJFrame.getContentPane()Lcalc/noSwing/Container;");
+		//keepMList.add("calc.view.CalculatorView.getContentPane()Lcalc/noSwing/Container;");
+		//keepMList.add("calc.noSwing.MyJFrame.getContentPane()Lcalc/noSwing/Container;");
 
 		CallGraphSlicer cgs = new CallGraphSlicer();
 		cgs.calcSlice(scopeFile, excluFile, mainClass, caller, callee,
