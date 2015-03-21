@@ -24,7 +24,7 @@ public class SlicerTest_rwgui {
 		String caller = "";
 		String callee = "";
 		caller = "rwgui.model.RackAndComponentSet.createRackTypeI(Ljava/lang/String;IDDZZLjava/lang/String;)V";
-		callee = "java.beans.PropertyChangeSupport.firePropertyChange(Ljava/lang/String;ZZ)V";
+		callee = "java.beans.PropertyChangeSupport.firePropertyChange(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V";
 		ArrayList<String> keepMList = new ArrayList<String>();
 		//keepMList.add("calc.view.CalculatorView.getContentPane()Lcalc/noSwing/Container;");
 		//keepMList.add("calc.noSwing.MyJFrame.getContentPane()Lcalc/noSwing/Container;");
