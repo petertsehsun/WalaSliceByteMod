@@ -98,14 +98,14 @@ public class CallGraphSlicer {
 		System.out.println("done");
 		System.out.println("Time to build Call Graph " + (end - start) + "ms");
 		System.out.println(CallGraphStats.getStats(cg));
-		//SSif (debugLevel >= 4) {
+		if (debugLevel >= 4) {
 			for (int i = 0; i < cg.getNumberOfNodes(); i++) {
 				CGNode n = cg.getNode(i);
 				System.out.println("NODE SIG " + n.getMethod().getSignature());
 			}
 		
-		//SS	System.out.println(cg.toString());
-		//SS}
+			System.out.println(cg.toString());
+		}
 		start = System.currentTimeMillis();
 		ArrayList<String> keepMethodList = calcSlice(builder, cg, caller,
 				callee);

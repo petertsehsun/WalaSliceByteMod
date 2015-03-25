@@ -1,0 +1,13 @@
+java\/net\/.*
+java\/nio\/.*
+java\/sql\/.*
+java\/rmi\/.*
+java\/applet\/.*
+java\/math\/.*
+java\/text\/.*
+oracle\/.*
+sun\/.*
+org\/.*
+com\/.*
+netscape\/.*
+javafx\/.*
