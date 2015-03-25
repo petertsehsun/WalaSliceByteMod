@@ -23,8 +23,10 @@ public class SlicerTest_rwgui {
 		String mainClass = "Lrwgui/view/RWGuiFrame";
 		String caller = "";
 		String callee = "";
-		caller = "rwgui.model.RackAndComponentSet.createRackTypeI(Ljava/lang/String;IDDZZLjava/lang/String;)V";
-		callee = "java.beans.PropertyChangeSupport.firePropertyChange(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V";
+//		caller = "rwgui.model.RackAndComponentSet.createRackTypeI(Ljava/lang/String;IDDZZLjava/lang/String;)V";
+//		callee = "java.beans.PropertyChangeSupport.firePropertyChange(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V";
+		caller = "rwgui.view.RWGuiView.initCreateDialog(Ljava/lang/String;Ljava/lang/Class;)Lrwgui/view/CreateDialog";
+		callee = "rwgui.view.CreateDialog.\\<init\\>(Ljavax/swing/JFrame;Ljava/lang/String;Lrwgui/view/RWGuiView;Lrwgui/controller/RWGuiController;Ljava/lang/Class;)V";
 		ArrayList<String> keepMList = new ArrayList<String>();
 		//keepMList.add("calc.view.CalculatorView.getContentPane()Lcalc/noSwing/Container;");
 		//keepMList.add("calc.noSwing.MyJFrame.getContentPane()Lcalc/noSwing/Container;");
@@ -37,3 +39,14 @@ public class SlicerTest_rwgui {
 		System.out.println("Total time to Slice and fix Byte Code : "+totalTime+"ms");
 	}
 }
+
+//RWGuiView: private CreateDialog initCreateDialog(String title, Class nodeClass)
+//CreateDialog:public CreateDialog(JFrame frame, String title, RWGuiView parent,RWGuiController controller, Class nodeClass) {
+
+
+//rwgui.view.CreateDialog.createDialog propertyChange(PropertyChangeEvent)
+//CreateRackTypeMethod: public void execute(Hashtable params
+//RWGuiController:public void createRackType(Hashtable params
+//RWGuiController:public void (String typeName, int height, double power,double price, boolean moreCanBePurchased, boolean hasUPS)
+//caller = "rwgui.model.RackAndComponentSet.createRackTypeI(Ljava/lang/String;IDDZZLjava/lang/String;)V";
+//callee = "java.beans.PropertyChangeSupport.firePropertyChange(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V";

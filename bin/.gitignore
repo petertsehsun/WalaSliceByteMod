@@ -2,3 +2,5 @@
 /slicerTest/
 /AcctMgrExclusions.txt
 /AcctMgrScopeList.txt
+/modelCheckCTLExclusions.txt
+/modelCheckCTLScopeList.txt
