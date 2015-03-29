@@ -50,7 +50,7 @@ import com.ibm.wala.util.graph.GraphSlicer;
 import com.ibm.wala.util.warnings.Warnings;
 
 public class CallGraphSlicer {
-	static int debugLevel = 6;
+	static int debugLevel = 0;
 	long start; 
 	long end ; 
 
@@ -324,7 +324,10 @@ public class CallGraphSlicer {
 			throws NotFoundException, CannotCompileException, IOException {
 		ArrayList<String> removeList = new ArrayList<String>();
 		ClassFileModifier cfm = new ClassFileModifier();
-
+		int totalMethods = 0;
+		int removedMethods = 0;
+		int keepMethods = 0;
+		
 		for (IClass c : cha) {
 			ArrayList<Method_Signature> MethodSig = new ArrayList<Method_Signature>();
 
@@ -339,12 +342,13 @@ public class CallGraphSlicer {
 				String sig = m.getSignature();
 				String desc = m.getDescriptor().toString();
 				String name = m.getName().toString();
-
+totalMethods++;
 				if (!keepList.contains(sig) && sig.startsWith(fixCName)) {
 					// don't add java library stuff
 					if (!(cname.startsWith("Ljava") || name.contains("<init>") || name
 							.contains("<clinit>") || sig.startsWith("java.lang.Object"))) {
 						removeList.add(sig);
+						removedMethods++;
 						MethodSig.add(new Method_Signature(name, desc));
 						// System.out.println("mclas = " + fixCName +
 						// " mName = " + name
@@ -355,6 +359,7 @@ public class CallGraphSlicer {
 						}
 					}
 				} else {
+					keepMethods++;
 					if (debugLevel >= 1) {
 						// System.out.println("Keep " + sig);
 					}
@@ -364,6 +369,7 @@ public class CallGraphSlicer {
 				cfm.findModMethod(cPath, fixCName, MethodSig);
 			}
 		} // class
+		System.out.println(totalMethods+" total methods "+removedMethods+" removed "+keepMethods+" kept");
 	}
 
 }
