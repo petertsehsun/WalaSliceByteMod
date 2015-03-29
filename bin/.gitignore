@@ -1,6 +1,19 @@
-/slicerWala/
-/slicerTest/
 /AcctMgrExclusions.txt
 /AcctMgrScopeList.txt
+/CalcNoSwingScopeList.txt
+/Copy of scopeList.txt
+/MyExclusions.txt
+/RWGuiExclusions.txt
+/byteCodeMod/
+/byteCodeModTest/
+/exPkg/
+/javassist.jar
 /modelCheckCTLExclusions.txt
+/modelCheckCTLExclusions_noSwing.txt
 /modelCheckCTLScopeList.txt
+/modelCheckCTLScopeList_noSwing.txt
+/rwguiScopeList.txt
+/savedExamples/
+/scopeList.txt
+/slicerTest/
+/slicerWala/

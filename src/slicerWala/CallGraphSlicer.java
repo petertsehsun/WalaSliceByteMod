@@ -50,7 +50,7 @@ import com.ibm.wala.util.graph.GraphSlicer;
 import com.ibm.wala.util.warnings.Warnings;
 
 public class CallGraphSlicer {
-	static int debugLevel = 0;
+	static int debugLevel = 6;
 	long start; 
 	long end ; 
 
